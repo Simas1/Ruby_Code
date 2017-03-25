@@ -1,3 +1,5 @@
+require_relative 'debugger_helper'
+
 def source(name)
   puts "Using source from #{name}"
 end
@@ -16,5 +18,3 @@ template 'C:\temp\test.txt' do
   source 'Source.txt'
   path 'www.empty.com'
 end
-
-sleep(1) # cheap way to fix ECONNRESET in debugger
