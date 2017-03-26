@@ -27,3 +27,13 @@ puts map(price_list, tax)
 
 puts 'Already exist map in enumerable'
 puts price_list.map(&discount) # pass Proc as Block
+
+puts 'How it works:'
+result = price_list.map do |price|
+  price - (price * 0.15)
+end
+puts result.join(',')
+
+result = price_list.map {|price| price - (price * 0.15)}
+puts result.join(',')
+
